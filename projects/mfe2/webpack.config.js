@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "mfe1",
+    uniqueName: "mfe2",
     publicPath: "auto"
   },
   optimization: {
@@ -27,11 +27,11 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
         library: { type: "module" },
-        name: "mfe1",
+        name: "mfe2",
         filename: "remoteEntry.js",
         exposes: {
-            './download': './projects/mfe1/src/app/download/download.component.ts',
-            './upload': './projects/mfe1/src/app/upload/upload.component.ts'
+            './analyze': './projects/mfe2/src/app/analyze/analyze.component.ts',
+            './enrich': './projects/mfe2/src/app/enrich/enrich.component.ts',
         },        
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

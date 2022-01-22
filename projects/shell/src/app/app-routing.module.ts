@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConfigComponent } from './config/config.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -9,8 +10,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'flights',
-    loadChildren: () => import('mfe1/flights').then(m => m.FlightsModule)
+    path: 'config',
+    component: ConfigComponent
   }
 ];
 

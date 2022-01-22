@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AnalyzeComponent } from './analyze/analyze.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConfigComponent } from './config/config.component';
-import { HomeComponent } from './home/home.component';
-import { PluginProxyComponent } from './plugins/plugin-proxy.component';
+import { EnrichComponent } from './enrich/enrich.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ConfigComponent,
-    PluginProxyComponent
+    AnalyzeComponent,
+    EnrichComponent
   ],
   imports: [
     BrowserModule,
