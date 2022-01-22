@@ -41,5 +41,5 @@ export function buildRoutes(options: Microfrontend[]): Routes {
       loadChildren: () => loadRemoteModule(o).then(m => m[o.ngModuleName])
   }));
 
-  return [...routes, ...lazyRoutes];
+  return [...routes, ...lazyRoutes, {path: '**', redirectTo: ''}];
 }
